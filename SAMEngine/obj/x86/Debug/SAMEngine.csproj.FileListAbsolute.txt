@@ -1,0 +1,9 @@
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\bin\Debug\SAMEngine.exe.config
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\bin\Debug\SAMEngine.exe
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\bin\Debug\SAMEngine.pdb
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\obj\x86\Debug\SAMEngine.Properties.Resources.resources
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\obj\x86\Debug\SAMEngine.csproj.GenerateResource.Cache
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\obj\x86\Debug\SAMEngine.exe
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\obj\x86\Debug\SAMEngine.pdb
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\obj\x86\Debug\SAMEngine.SAMEngineForm.resources
+C:\Users\Administrator\Desktop\SAMEngine\SAMEngine\obj\x86\Debug\SAMEngine.csprojResolveAssemblyReference.cache

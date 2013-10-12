@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="DBEngine" Class="DBEngineDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ZAY-PC\SQLEXPRESS;Initial Catalog=DBEngine;Integrated Security=True;Pooling=False" SettingsObjectName="SAMEngine.Properties.Settings" SettingsPropertyName="DBEngineConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.tbl_subFolder" Member="tbl_subFolders">
+    <Type Name="tbl_subFolder">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idFolder" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="namaSubFolder" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="tbl_subFolder_tbl_File" Member="tbl_Files" ThisKey="id" OtherKey="idSubFolder" Type="tbl_File" />
+      <Association Name="tbl_Folder_tbl_subFolder" Member="tbl_Folder" ThisKey="idFolder" OtherKey="id" Type="tbl_Folder" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_File" Member="tbl_Files">
+    <Type Name="tbl_File">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="idSubFolder" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="kunciSAM" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="isiFile" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="namaFile" Type="System.String" DbType="VarChar(250)" CanBeNull="true" />
+      <Column Name="path" Type="System.String" DbType="Text" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="noKartu" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="tglInput" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="tbl_subFolder_tbl_File" Member="tbl_subFolder" ThisKey="idSubFolder" OtherKey="id" Type="tbl_subFolder" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tbl_Folder" Member="tbl_Folders">
+    <Type Name="tbl_Folder">
+      <Column Name="id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="tbl_Folder_tbl_subFolder" Member="tbl_subFolders" ThisKey="id" OtherKey="idFolder" Type="tbl_subFolder" />
+    </Type>
+  </Table>
+  <Table Name="dbo.jmlStatFolder" Member="jmlStatFolders">
+    <Type Name="jmlStatFolder">
+      <Column Name="nama" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="jml" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
